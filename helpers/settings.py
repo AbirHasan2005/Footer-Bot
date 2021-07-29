@@ -23,8 +23,8 @@ async def ShowSettings(event: Message, user_id: int):
     markup = [
         [InlineKeyboardButton(f"Service is {'ON' if (service_on is True) else 'OFF'} ✅", callback_data="triggerService")],
         [InlineKeyboardButton("Set Footer Text", callback_data="setFooterText")],
-        [InlineKeyboardButton(f"Also Apply Footer to Text {'ON' if (also_footer2text is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Text")],
-        [InlineKeyboardButton(f"Also Apply Footer to Photo {'ON' if (also_footer2photo is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Photo")]
+        [InlineKeyboardButton(f" Also Apply Footer to Photo{'ON' if (also_footer2text is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Text")],
+        [InlineKeyboardButton(f"Also Apply Footer to Text {'ON' if (also_footer2photo is True) else 'OFF'} ✅", callback_data="setAlsoFooter2Photo")]
     ]
     if footer_ is not None:
         markup.append([InlineKeyboardButton("Remove Footer Text", callback_data="rmFooterText"),
