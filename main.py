@@ -34,7 +34,7 @@ async def _start(bot: Client, m: Message):
             Config.START_TEXT,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"), InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
+                    [InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"), InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
                     [InlineKeyboardButton("Developer - @AbirHasan2005", url="https://t.me/AbirHasan2005")]
                 ]
             ),
@@ -215,7 +215,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 except UserNotParticipant:
                     await cb.message.edit("Unable to Add Channel in Database!\nI am not Admin in Channel.")
                 except Exception as err:
-                    await cb.message.edit(f"Unable to Find Channel!\n\n**Error:** `{err}`", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]))
+                    await cb.message.edit(f"Unable to Find Channel!\n\n**Error:** `{err}`", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")]]))
             elif event_.text and (event_.text == "/cancel"):
                 await cb.message.edit("Process Cancelled!")
         except TimeoutError:
