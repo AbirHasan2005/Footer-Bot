@@ -191,7 +191,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         )
         try:
             event_: Message = await bot.listen(cb.message.chat.id, timeout=300)
-            if event_.forward_from_chat:
+            if event_.forward_from_chat and ((await db.is_user_exist(event_.forward_from_chat.id)) is False):
                 try:
                     _I, _err = await FetchMeOnChat(bot, chat_id=event_.forward_from_chat.id)
                     if _I == 404:
