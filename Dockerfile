@@ -1,6 +1,9 @@
 FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /app
+
 RUN apt-get update
 RUN echo y | apt-get install locales
 RUN echo y | apt install build-essential
